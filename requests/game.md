@@ -20,14 +20,14 @@ GET https://dak.gg/er/characters/{characterKey}?hl=zh_CN&tab=introduction&teamMo
 说明：
 
 - 这是页面接口，不是纯 JSON 接口
-- 返回内容里通常需要从页面状态中提取结构化数据
+- 返回内容是由Next.js 生成 json数据位于__NEXT_DATA__中
 
 ## 2. 对局记录
 
 - 方法：`GET`
 - 路径：`/v1/players/{nickname}/matches`
 - 查询参数：
-  - `season={seasonType}` 可选
+  - `season={seasonType}` 
   - `matchingMode={matchingMode}`
   - `teamMode={teamMode}`
   - `page={page}`
@@ -43,8 +43,3 @@ GET https://er.dakgg.io/api/v1/players/{nickname}/matches?season={seasonType}&ma
 - `season` 可省略
 - `page` 从 1 开始
 - 玩家昵称同样需要 URL 编码
-
-## 常见拆分点
-
-- 如果后续要补赛季筛选、分页、房间号分析，建议单独拆文件
-- 对局接口通常变化更快，单独维护比放在总文件里更稳妥

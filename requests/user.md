@@ -32,10 +32,3 @@ GET https://er.dakgg.io/api/v0/rpc/player-sync/by-name/{nickname}
 - 这个接口通常用于触发或获取玩家同步结果
 - 返回可能包含同步状态、失败原因或等待信息
 
-## 请求拆分建议
-
-如果后续还会继续补玩家相关接口，建议再拆成：
-
-1. `profile.md`
-2. `sync.md`
-3. `match-history.md`

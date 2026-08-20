@@ -25,7 +25,6 @@ DAK.GG 永恒轮回相关接口的整理文档。
 ## 约定
 
 - `hl` 参数统一表示语言环境，常见值为 `zh_CN` 或 `kr`、`en`
-- 路径中的 `nickname`、`characterKey`、`serverName`、`teamMode`、`matchingMode` 等字段按接口要求传入
 - 本仓库只整理请求与资源规则，不额外封装 SDK
 
 

@@ -11,7 +11,6 @@
 | [game.md](game.md) | 对局记录与角色分析 |
 | [leaderboard.md](leaderboard.md) | 排行榜 |
 | [statistics.md](statistics.md) | 段位分布与角色统计 |
-| [image.md](image.md) | 图片资源路径规则 |
 
 ## 请求格式
 

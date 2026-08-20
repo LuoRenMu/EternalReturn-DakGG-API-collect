@@ -320,7 +320,24 @@ GET https://er.dakgg.io/api/v1/data/masteries?hl=zh_cn
 ```
 </details>
 
-## 9. 灌注
+## 9. 区域列表
+
+- 方法：`GET`
+- 路径：`/v1/data/areas`
+- 参数：`hl=zh_cn`
+
+示例：
+
+```text
+GET https://er.dakgg.io/api/v1/data/areas?hl=zh_cn
+```
+
+说明：
+
+- 返回地图区域的基础资料
+- 区域 id 可与物品响应中的 `spawnAreas` 对照使用
+
+## 10. 灌注
 
 - 方法：`GET`
 - 路径：`/v1/data/infusions`
@@ -343,7 +360,7 @@ GET https://er.dakgg.io/api/v1/data/masteries?hl=zh_cn
 ```
 </details>
 
-## 10. 角色技能
+## 11. 角色技能
 
 - 方法：`GET`
 - 路径：`/v1/data/skills`
@@ -376,6 +393,7 @@ GET https://er.dakgg.io/api/v1/data/masteries?hl=zh_cn
 ```text
 GET https://er.dakgg.io/api/v1/data/trait-skills?hl=zh_cn
 GET https://er.dakgg.io/api/v1/data/tactical-skills?hl=zh_cn
+GET https://er.dakgg.io/api/v1/data/areas?hl=zh_cn
 GET https://er.dakgg.io/api/v1/data/infusions?hl=zh_cn
 GET https://er.dakgg.io/api/v1/data/skills?hl=zh_cn
 ```

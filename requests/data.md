@@ -16,6 +16,26 @@
 GET https://er.dakgg.io/api/v1/data/tiers?hl=zh_cn
 ```
 
+<details>
+<summary>response</summary>
+
+```json
+{
+  "tiers": [
+    {
+      "id": 0, // 段位id 数据交互常用该字段 
+      "key": "Unrank",  // 段位key(用处未知)
+      "name": "段位未鉴定", // 段位
+      "imageUrl": "//cdn.dak.gg/assets/er/images/rank/full/0.png", // 图片
+      "iconUrl": "//cdn.dak.gg/assets/er/images/rank/round/0.png" // 图片
+    }
+    // .... 其他数据
+  ]
+}
+```
+</details>
+
+
 ## 2. 赛季列表
 
 - 方法：`GET`
@@ -28,6 +48,39 @@ GET https://er.dakgg.io/api/v1/data/tiers?hl=zh_cn
 GET https://er.dakgg.io/api/v1/data/seasons?hl=zh_CN
 ```
 
+<details>
+<summary>response</summary>
+
+```json
+{
+  "seasons": [
+    {
+      "id": -1,   // 赛季id(在官方的api中常用于该字段)
+      "key": "LEGACY", //段位 key (在dakgg中常用于数据交互)
+      "name": "Legacy" // 段位名 根据hl参数变动
+    },
+    {
+      "id": 0,
+      "key": "NORMAL",
+      "name": "一般"
+    },
+    {
+      "id": 1,
+      "key": "SEASON_1",
+      "name": "EA赛季 S1"
+    },
+    // ... more
+    {
+      "id": 41,
+      "key": "SEASON_21",
+      "name": "赛季 S12",  
+      "isCurrent": true  // 当为false时该字段不显示(建议保守编码)
+    }
+  ]
+}
+```
+</details>
+
 ## 3. 当前赛季
 
 - 方法：`GET`
@@ -39,6 +92,19 @@ GET https://er.dakgg.io/api/v1/data/seasons?hl=zh_CN
 ```text
 GET https://er.dakgg.io/api/v0/current-season?hl=zh_CN
 ```
+<details>
+<summary>response</summary>
+与上面相同 区别在于key 变为了 type   
+
+```json
+{
+  "id": 41, 
+  "type": "SEASON_21",
+  "name": "赛季 S12"
+}
+```
+</details>
+
 
 ## 4. 角色列表
 
